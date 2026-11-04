@@ -7,13 +7,13 @@
   "display": "standalone",
   "background_color": "#E6EAE4",
   "theme_color": "#D4E62A",
-  "lang": "de",
+  "lang": "en",
   "icons": [
     {
-      "src": "/assets/icon-512.png",
-      "sizes": "192x192 512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }
