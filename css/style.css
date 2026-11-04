@@ -94,7 +94,9 @@ h2 {
   transition: background-color .16s, --cut .24s cubic-bezier(.2, .8, .2, 1);
 }
 .tiles li:hover, .tiles li:focus-within { background: var(--accent); --cut: 34px; }
-.tiles h3 { font-family: var(--display); font-weight: 700; font-size: 1.45rem; line-height: 1.1; letter-spacing: -.02em; margin: 0; max-width: 14ch; text-wrap: balance; }
+.tiles h3 { font-family: var(--display); font-weight: 700; font-size: 1.45rem; line-height: 1.1; letter-spacing: -.025em; margin: 0; text-wrap: balance; }
+.tiles li:hover h3, .tiles li:focus-within h3 { transform: translateX(6px); }
+.tiles h3 { transition: transform .24s cubic-bezier(.2, .8, .2, 1); }
 .tiles p { margin: 0; color: var(--muted); max-width: 34ch; line-height: 1.5; transition: color .16s; }
 .tiles li:hover p, .tiles li:focus-within p { color: var(--text); }
 
@@ -138,6 +140,8 @@ address { font-style: normal; font-size: 1.25rem; line-height: 1.45; margin-bott
 .foot a:not(:hover) { text-decoration: none; }
 .foot a:hover { color: var(--accent); }
 .legal p { margin: 6px 0 0; font-size: .85rem; }
+@media (min-width: 641px) { .legal { text-align: right; } }
+.foot .legal a { padding-block: 10px; display: inline-block; }
 
 /* tablet + mobile: wheel moves below the copy, so type never meets the tyre */
 @media (max-width: 900px) {
@@ -153,6 +157,7 @@ address { font-style: normal; font-size: 1.25rem; line-height: 1.45; margin-bott
 @media (max-width: 640px) {
   .hero { padding-top: 104px; }
   .hero-copy { padding-bottom: 40px; }
+  h1 { font-size: clamp(2.7rem, 12.2vw, 4.6rem); margin-bottom: 24px; }
   .btn { width: 100%; }
   .wheel { width: 110vw; margin: 0 0 -35vw 8vw; }
   .tiles { grid-template-columns: 1fr; }
